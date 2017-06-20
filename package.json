@@ -1,7 +1,7 @@
 {
   "name": "vue-ssr-starter",
   "version": "1.0.0",
-  "description": "A Vue.js starter kit with vue 2.0, vue-router, vuex and axios for server side rendering.",
+  "description": "A Vue.js starter kit with vue 2.0, vue-router, vuex and axios for server-side rendering.",
   "author": "Liam Wang <liam.wang@live.com>",
   "private": true,
   "repository": {

@@ -2,9 +2,7 @@
 
 > A Vue.js starter kit with vue 2.0, vue-router, vuex and axios for server-side rendering.
 
-<p align="center">
-    <img style="box-shadow: 0 0 10px;" src="https://user-images.githubusercontent.com/5000396/27325038-b558c9f6-55d9-11e7-8696-2f282297e177.gif">
-</p>
+![screenshot](https://user-images.githubusercontent.com/5000396/27325686-c9ccec44-55db-11e7-8c05-a3d8a4cd0415.png)
 
 ## Build Setup
 

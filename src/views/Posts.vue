@@ -2,9 +2,7 @@
   <div class="posts">
     <div v-for="post in posts" class="post">
       <h3>{{post.id}}. {{post.title}}</h3>
-      <summary>
-        {{post.body}}
-      </summary>
+      <p>{{post.body}}</p>
     </div>
   </div>
 </template>

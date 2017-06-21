@@ -15,7 +15,7 @@ const serverTitleMixin = {
     // If getTitle rereturns undefined, you should not set this.$ssrContext.title a value,
     // otherwise, `Cannot read property 'ssrContext' of undefined` error will be throwed.
     if (title) {
-      this.$ssrContext.title = `${title} | ${TITLE}`
+      this.$ssrContext.title = `${title} - ${TITLE}`
     }
   }
 }
@@ -24,7 +24,7 @@ const clientTitleMixin = {
   mounted() {
     const title = getTitle(this)
     if (title) {
-      document.title = `${title} | ${TITLE}`
+      document.title = `${title} - ${TITLE}`
     }
   }
 }

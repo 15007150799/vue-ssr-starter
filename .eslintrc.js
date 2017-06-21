@@ -5,7 +5,8 @@ module.exports = {
     sourceType: 'module'
   },
   env: {
-    node: true
+    node: true,
+    browser: true
   },
   // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
   extends: 'standard',
@@ -21,7 +22,7 @@ module.exports = {
     'generator-star-spacing': 0,
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
-    // not allow space before function parentheses
+    // allow and not allow space before function parentheses
     "space-before-function-paren": ["error", { "anonymous": "always", "named": "never" }],
     // disallow multiple empty lines
     "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }]

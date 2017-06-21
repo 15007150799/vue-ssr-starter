@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <v-header/>
-    <router-view class="view"></router-view>
+    <transition name="fade" mode="out-in">
+      <router-view class="view"></router-view>
+    </transition>
   </div>
 </template>
 
@@ -45,5 +47,15 @@
 
   .view>h1 {
     margin-left: 3px;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all .2s ease
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0
   }
 </style>

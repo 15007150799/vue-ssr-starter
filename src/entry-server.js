@@ -16,7 +16,8 @@ export default context => {
     const fullPath = router.resolve(url).route.fullPath
 
     if (fullPath !== url) {
-      reject(new URIError(`url:${fullPath}`))
+      // eslint-disable-next-line
+      reject({ url: fullPath })
     }
 
     // set router's location
@@ -27,7 +28,8 @@ export default context => {
       const matchedComponents = router.getMatchedComponents()
       // no matched routes
       if (!matchedComponents.length) {
-        reject(new URIError(`404: ${fullPath}`))
+        // eslint-disable-next-line
+        reject({ code: 404 })
       }
       // Call fetchData hooks on components matched by the route.
       // A preFetch hook dispatches a store action and returns a Promise,

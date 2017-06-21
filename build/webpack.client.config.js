@@ -2,10 +2,7 @@ const webpack = require('webpack')
 const merge = require('webpack-merge')
 const base = require('./webpack.base.config')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
-
-const isProd = process.env.NODE_ENV === 'production'
 
 const config = merge(base, {
   entry: {
@@ -28,33 +25,7 @@ const config = merge(base, {
       }
     }),
     new VueSSRClientPlugin()
-  ],
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: isProd
-          ? ExtractTextPlugin.extract({
-            use: 'css-loader?minimize',
-            fallback: 'vue-style-loader'
-          })
-          : ['vue-style-loader', 'css-loader']
-      }
-    ]
-  }
+  ]
 })
-
-if (isProd) {
-  config.plugins.push(
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
-    }),
-    new ExtractTextPlugin({
-      filename: '[name].[contenthash:8].css'
-    })
-  )
-}
 
 module.exports = config

@@ -13,7 +13,7 @@ const useMicroCache = process.env.MICRO_CACHE !== 'false'
 
 const app = express()
 
-const template = fs.readFileSync(resolve('index.html'), 'utf-8').replace(/>(\s|\n)+</g, '><')
+const template = fs.readFileSync(resolve('./public/index.html'), 'utf-8').replace(/>(\s|\n)+</g, '><')
 
 function createRenderer(bundle, options) {
   // https://github.com/vuejs/vue/blob/dev/packages/vue-server-renderer/README.md#why-use-bundlerenderer

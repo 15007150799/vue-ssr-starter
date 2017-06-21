@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <img src='public/logo.png' />
+    <img src="~@public/logo.png" />
     <ul>
       <li>
         <router-link to="/" exact>Home</router-link>

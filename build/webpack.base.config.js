@@ -12,8 +12,8 @@ const config = {
   output: {
     path: resolve('dist'),
     publicPath: '/dist/',
-    filename: '[name].[chunkhash:8].js',
-    chunkFilename: '[name].[chunkhash:8].c.js'
+    filename: 'js/[name].[chunkhash:8].js'
+    //,chunkFilename: '[id].[hash:8].c.js'
   },
   resolve: {
     modules: [resolve('src'), 'node_modules'],
@@ -46,13 +46,6 @@ const config = {
         exclude: /node_modules/
       },
       {
-        exclude: /\.(html|js|vue|css|json)$/,
-        loader: 'file-loader',
-        options: {
-          name: 'media/[name].[hash:8].[ext]',
-        }
-      },
-      {
         test: /\.css$/,
         use: isProd
           ? ExtractTextPlugin.extract({
@@ -60,6 +53,22 @@ const config = {
             fallback: 'vue-style-loader'
           })
           : ['vue-style-loader', 'css-loader']
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 256,
+          name: 'img/[name].[hash:8].[ext]'
+        }
+      },
+      {
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 256,
+          name: 'fonts/[name].[hash:8].[ext]'
+        }
       }
     ]
   },
@@ -73,7 +82,7 @@ const config = {
         compress: { warnings: false }
       }),
       new ExtractTextPlugin({
-        filename: '[name].[contenthash:8].css'
+        filename: 'css/[name].[contenthash:8].css'
       })
     ]
     : [

@@ -5,9 +5,10 @@ const express = require('express')
 const favicon = require('serve-favicon')
 const compression = require('compression')
 const { createBundleRenderer } = require('vue-server-renderer')
+const { PORT: defaultPort, TITLE: defaultTitle } = require('./webconfig')
 
-const resolve = file => path.resolve(__dirname, file)
 const isProd = process.env.NODE_ENV === 'production'
+const resolve = file => path.resolve(__dirname, file)
 const useMicroCache = process.env.MICRO_CACHE !== 'false'
 
 const app = express()
@@ -103,7 +104,7 @@ function render(req, res) {
   }
 
   const context = {
-    title: 'Vue SSR Starter', // default title
+    title: defaultTitle,
     url: req.url
   }
   renderer.renderToString(context, (err, html) => {
@@ -124,7 +125,7 @@ app.get('*', isProd ? render : (req, res) => {
   readyPromise.then(() => render(req, res))
 })
 
-const port = process.env.PORT || 8080
+const port = process.env.PORT || defaultPort
 app.listen(port, () => {
   console.log(`server started at localhost:${port}`)
 })

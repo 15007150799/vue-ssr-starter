@@ -18,8 +18,9 @@ const config = {
     modules: [resolve('src'), 'node_modules'],
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      '@': resolve('src'),
-      'public': path.resolve(__dirname, '../public')
+      '@src': resolve('src'),
+      '@root': path.resolve(__dirname, '..'),
+      '@public': path.resolve(__dirname, '../public')
     }
   },
   module: {

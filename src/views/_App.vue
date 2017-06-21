@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import vHeader from '@/components/Header'
+  import vHeader from '@src/components/Header'
   export default {
     components: {
       vHeader
@@ -25,11 +25,13 @@
   }
 
   a {
-    color: #35495E;
+    color: #828282;
     text-decoration: none;
   }
 
-
+  a:hover {
+    color: #FF6600;
+  }
 
   #app {
     max-width: 1000px;

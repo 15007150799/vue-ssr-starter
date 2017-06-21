@@ -1,6 +1,7 @@
 import http from 'axios'
+import { BASE_URL } from '@root/webconfig'
 
-http.defaults.baseURL = 'http://jsonplaceholder.typicode.com/'
+http.defaults.baseURL = BASE_URL
 
 export default {
   getPosts: ({ commit, state }) => {

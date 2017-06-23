@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const createView = relativePath => () => System.import('@src/views/' + relativePath)
+const createView = relativePath => () => import('@src/views/' + relativePath)
 
 export default () => new Router({
   mode: 'history',

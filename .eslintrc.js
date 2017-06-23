@@ -23,8 +23,6 @@ module.exports = {
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     // allow and not allow space before function parentheses
-    "space-before-function-paren": ["error", { "anonymous": "always", "named": "never" }],
-    // disallow multiple empty lines
-    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }]
+    "space-before-function-paren": ["error", { "anonymous": "always", "named": "never" }]
   }
 }

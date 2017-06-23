@@ -1,5 +1,7 @@
+const isProd = process.env.NODE_ENV === 'production'
+
 module.exports = {
-  extractCSS: process.env.NODE_ENV === 'production',
+  extractCSS: isProd,
   preserveWhitespace: false,
   postcss: [
     require('autoprefixer')({
@@ -7,7 +9,7 @@ module.exports = {
     })
   ],
   cssModules: {
-    localIdentName: isProd ? '[hash:base64]' : '[path][name]---[local]---[hash:base64:5]',
+    localIdentName: isProd ? '[hash:base64]' : '[name]---[local]---[hash:base64:5]',
     camelCase: true
   }
 }

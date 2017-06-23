@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header :class="$style.header">
     <img src="~@public/logo.png" />
     <ul>
       <li>
@@ -15,33 +15,30 @@
   </header>
 </template>
 
-<style lang="stylus" scoped>
-header
+<style lang="stylus" module>
+.header
   position: relative
   height: 52px
   padding: 10px 0
   border-bottom: 1px solid #eee
 
-img
-  float: left
-  height: 100%
-  margin-right: 30px
-  border: 2px solid #FF8B3F
-  border-radius: 3px
+  img
+    float: left
+    height: 100%
+    margin-right: 30px
+    border: 2px solid #FF8B3F
+    border-radius: 3px
 
-ul
-  margin: 0
-  padding: 0
-  list-style: none
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
 
-li
-  float: left
+  li
+    float: left
 
-  > a
-    display: block
-    line-height: 32px
-    padding: 0 15px
-
-.router-link-active
-  color: #FF6600
+    > a
+      display: block
+      line-height: 32px
+      padding: 0 15px
 </style>

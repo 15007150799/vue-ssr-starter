@@ -46,4 +46,7 @@ export default {
 
   .fade-enter,  .fade-leave-active
     opacity: 0
+
+  .router-link-active
+    color: #FF6600
 </style>

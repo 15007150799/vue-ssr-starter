@@ -1,61 +1,49 @@
 <template>
   <div id="app">
-    <v-header/>
+    <v-header />
     <transition name="fade" mode="out-in">
-      <router-view class="view"></router-view>
+      <router-view class="view" />
     </transition>
   </div>
 </template>
 
 <script>
-  import vHeader from '@src/components/Header'
-  export default {
-    components: {
-      vHeader
-    }
+import vHeader from '@src/components/Header'
+export default {
+  components: {
+    vHeader
   }
-
+}
 </script>
 
-<style>
-  * {
-    box-sizing: border-box;
-  }
+<style lang="stylus">
+  *
+    box-sizing: border-box
 
-  body {
-    margin: 0;
-  }
+  body
+    margin: 0
 
-  a {
-    color: #828282;
-    text-decoration: none;
-  }
+  a
+    color: #828282
+    text-decoration: none
 
-  a:hover {
-    color: #FF6600;
-  }
+  a:hover
+    color: #FF6600
 
-  #app {
-    max-width: 1000px;
-    padding: 0 30px;
-    margin: 0 auto;
-  }
+  #app
+    max-width: 1000px
+    padding: 0 30px
+    margin: 0 auto
 
-  .view {
-    padding: 15px 0;
-  }
+  .view
+    padding: 15px 0
 
-  .view>h1 {
-    margin-left: 3px;
-  }
+  .view>h1
+    margin-left: 3px
 
-  .fade-enter-active,
-  .fade-leave-active {
+  .fade-enter-active, .fade-leave-active
     transition: all .2s ease
-  }
 
-  .fade-enter,
-  .fade-leave-active {
+  .fade-enter,  .fade-leave-active
     opacity: 0
-  }
 </style>

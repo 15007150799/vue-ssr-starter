@@ -16,13 +16,13 @@
 </template>
 
 <style lang="stylus" scoped>
-header 
+header
   position: relative
   height: 52px
   padding: 10px 0
   border-bottom: 1px solid #eee
 
-header>img
+img
   float: left
   height: 100%
   margin-right: 30px
@@ -34,13 +34,13 @@ ul
   padding: 0
   list-style: none
 
-ul>li
+li
   float: left
 
-ul>li>a
-  display: block
-  line-height: 32px
-  padding: 0 15px
+  > a
+    display: block
+    line-height: 32px
+    padding: 0 15px
 
 .router-link-active
   color: #FF6600

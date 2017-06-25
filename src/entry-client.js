@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import { createApp } from './app'
-import ProgressBar from './common/ProgressBar.vue'
+import ProgressBar from './views/common/ProgressBar'
 
 // global progress bar
 const bar = Vue.prototype.$bar = new Vue(ProgressBar).$mount()

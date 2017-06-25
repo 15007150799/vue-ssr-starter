@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import vHeader from '@src/components/Header'
+import vHeader from './components/Header'
 export default {
   components: {
     vHeader

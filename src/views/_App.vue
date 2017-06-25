@@ -17,36 +17,36 @@ export default {
 </script>
 
 <style lang="stylus">
-  *
-    box-sizing: border-box
+*
+  box-sizing: border-box
 
-  body
-    margin: 0
+body
+  margin: 0
+  font-size 14px
+a
+  color: #828282
+  text-decoration: none
 
-  a
-    color: #828282
-    text-decoration: none
+a:hover
+  color: #FF6600
 
-  a:hover
-    color: #FF6600
+#app
+  max-width: 1000px
+  padding: 0 30px
+  margin: 0 auto
 
-  #app
-    max-width: 1000px
-    padding: 0 30px
-    margin: 0 auto
+.view
+  padding: 15px 0
 
-  .view
-    padding: 15px 0
+.view>h1
+  margin-left: 3px
 
-  .view>h1
-    margin-left: 3px
+.fade-enter-active, .fade-leave-active
+  transition: all .2s ease
 
-  .fade-enter-active, .fade-leave-active
-    transition: all .2s ease
+.fade-enter,  .fade-leave-active
+  opacity: 0
 
-  .fade-enter,  .fade-leave-active
-    opacity: 0
-
-  .router-link-active
-    color: #FF6600
+.router-link-active
+  color: #FF6600
 </style>

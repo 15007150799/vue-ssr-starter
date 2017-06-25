@@ -1,6 +1,13 @@
 import Vue from 'vue'
 import { createApp } from './app'
-import ProgressBar from './views/common/ProgressBar'
+import sprite from '@assets/sprite.svg'
+import ProgressBar from './views/components/ProgressBar'
+
+// inject svg sprite
+const spriteEl = document.createElement('div')
+spriteEl.style.display = 'none'
+spriteEl.innerHTML = sprite
+document.body.appendChild(spriteEl)
 
 // global progress bar
 const bar = Vue.prototype.$bar = new Vue(ProgressBar).$mount()

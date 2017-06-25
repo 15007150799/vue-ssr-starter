@@ -1,5 +1,6 @@
 import Vue from 'vue'
-import App from './views/_App.vue'
+import App from './views/_App'
+import Common from './views/common'
 import createStore from './store'
 import createRouter from './router'
 import { sync } from 'vuex-router-sync'
@@ -8,6 +9,9 @@ import * as filters from './util/filters'
 
 // mixin for handling title
 Vue.mixin(titleMixin)
+
+// common components
+Vue.use(Common)
 
 // register global utility filters.
 Object.keys(filters).forEach(key => {

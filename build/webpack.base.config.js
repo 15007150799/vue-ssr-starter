@@ -20,8 +20,9 @@ const config = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       '@src': resolve('src'),
-      '@root': path.resolve(__dirname, '..'),
-      '@public': path.resolve(__dirname, '../public')
+      '@public': resolve('public'),
+      '@assets': resolve('assets'),
+      '@root': path.resolve(__dirname, '..')
     }
   },
   module: {
@@ -55,7 +56,12 @@ const config = {
           : ['vue-style-loader', 'css-loader']
       },
       {
+        test: /sprite\.svg$/,
+        loader: 'raw-loader'
+      },
+      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
+        exclude: /sprite\.svg$/,
         loader: 'url-loader',
         options: {
           limit: 256,

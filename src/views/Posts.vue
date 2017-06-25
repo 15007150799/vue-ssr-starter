@@ -25,12 +25,12 @@ export default {
 
 <style lang="stylus" scoped>
   h3
-    margin: 20px 0 15px
+    margin 20px 0 15px
 
   .posts
-    max-width: 600px
+    max-width 600px
 
   .post 
-    padding-bottom: 15px
-    border-bottom: 1px solid #eee
+    padding-bottom 15px
+    border-bottom 1px solid #eee
 </style>

@@ -18,35 +18,35 @@ export default {
 
 <style lang="stylus">
 *
-  box-sizing: border-box
+  box-sizing border-box
 
 body
-  margin: 0
+  margin 0
   font-size 14px
 a
-  color: #828282
-  text-decoration: none
+  color #828282
+  text-decoration none
 
-a:hover
-  color: #FF6600
+  &:hover
+    color: #FF6600
 
 #app
-  max-width: 1000px
-  padding: 0 30px
-  margin: 0 auto
+  max-width 1000px
+  padding 0 30px
+  margin 0 auto
 
 .view
-  padding: 15px 0
+  padding 15px 0
 
 .view>h1
-  margin-left: 3px
+  margin-left 3px
 
 .fade-enter-active, .fade-leave-active
-  transition: all .2s ease
+  transition all .2s ease
 
 .fade-enter,  .fade-leave-active
-  opacity: 0
+  opacity 0
 
 .router-link-active
-  color: #FF6600
+  color #FF6600
 </style>

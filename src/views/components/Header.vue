@@ -21,30 +21,30 @@
 
 <style lang="stylus" module>
 .header
-  position: relative
-  height: 52px
-  line-height: 32px
-  padding: 10px 0
-  border-bottom: 1px solid #eee
+  position relative
+  height 52px
+  line-height 32px
+  padding 10px 0
+  border-bottom 1px solid #eee
 
   img
-    float: left
-    height: 100%
-    margin-right: 30px
-    border: 2px solid #FF8B3F
-    border-radius: 3px
+    float left
+    height 100%
+    margin-right 30px
+    border 2px solid #FF8B3F
+    border-radius 3px
 
   ul
-    margin: 0
-    padding: 0
-    list-style: none
+    margin 0
+    padding 0
+    list-style none
 
   li
-    float: left
+    float left
 
     > a
-      display: block
-      padding: 0 15px
+      display block
+      padding 0 15px
 
   :global
   
